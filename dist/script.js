@@ -20,6 +20,7 @@ var tableEditorModule = (function() {
   const strLength       = initStr.length;
   const paginationLen   = 10;
 
+
   let tableData         = [];
   let selectedTable     = [];
 
@@ -33,6 +34,7 @@ var tableEditorModule = (function() {
           <td>${row.name}</td>
           <td>${row.qty}</td>
           <td>${row.avail}</td>
+          <td>${row.autonomia}</td>
           <td><input type="checkbox"></td>
         </tr>`}).join("");
 
@@ -66,8 +68,15 @@ var tableEditorModule = (function() {
       addRowForm.classList.toggle("hidden");
     });
 
+
+    /* VER ESTA PARTE DE JS  */
+
+
     addRowForm.addEventListener("submit", function(e) {
       e.preventDefault();
+      let capacidad       = document.getElementById("capacidad");
+      let taplicacion     = document.getElementById("taplicacion");
+      let autonomia       = capacidad/taplicacion;  
       let availability = (addRowForm.pAvailability.checked) ? "Yes" : "No";
       let newDataSet = {
         "id"    : tableData.length + 1,
