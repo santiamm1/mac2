@@ -1,0 +1,16 @@
+.remove {
+  color: red;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border:none;
+}
+.remove:hover,
+.remove:active,
+.remove:focus {
+  outline-color: transparent;
+  font-weight: bold;
+  color: orange;
+  text-decoration: none;
+}
