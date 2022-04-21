@@ -14,7 +14,7 @@ var tableEditorModule = (function() {
   const sortIdBtn       = document.getElementById("sortId");
   const sortNameBtn     = document.getElementById("sortName");
   const sortQtyBtn      = document.getElementById("sortQty");
-  const sortAvailBtn    = document.getElementById("sortAvail");
+  const sortAvailBtn    = document.getElementById("sortAvail"); 
   const filterNameInp   = document.getElementById("filterName");
   const initStr         = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   const strLength       = initStr.length;
@@ -145,7 +145,7 @@ var tableEditorModule = (function() {
     drawTable();
   };
 
-  function addDemoData() {
+/*   function addDemoData() {
     demoDataBtn.addEventListener("click", function(e) {
       e.preventDefault();
       addRandomContent();
@@ -173,7 +173,7 @@ var tableEditorModule = (function() {
       recountIds();
       drawTable();
     });
-  };
+  }; */
 
   let currentSortedColumn = "";
 
@@ -190,7 +190,7 @@ var tableEditorModule = (function() {
     });
   };
 
-  function filterName() {
+ /*  function filterName() {
     filterNameInp.addEventListener("keyup", function() {
       let searchInp = this.value;
       let filteredArr = tableData.filter(data => data.name.toLowerCase().includes(searchInp));
@@ -200,22 +200,22 @@ var tableEditorModule = (function() {
       this.value = "";
       drawTable(selectedTable);
     });
-  };
+  }; */
 
   function init() {
-    addRandomContent();
-    addNewRow();
-    exportTableData();
-    clearTable();
-    delRows();
-    addDemoData();
-    importData();
-    exportData();
     sortColumn("id", sortIdBtn);
     sortColumn("name", sortNameBtn);
     sortColumn("qty", sortQtyBtn);
     sortColumn("avail", sortAvailBtn);
-    filterName();
+    /* addRandomContent(); */ 
+    addNewRow();
+    /* exportTableData(); */
+    clearTable();
+    delRows();
+    /* addDemoData(); */
+   /*  importData();
+    exportData(); */
+   /*  filterName(); */
   };
   return {
     init: init

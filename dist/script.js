@@ -76,13 +76,15 @@ var tableEditorModule = (function() {
       e.preventDefault();
       let capacidad       = document.getElementById("capacidad");
       let taplicacion     = document.getElementById("taplicacion");
-      let autonomia       = capacidad/taplicacion;  
+     /*  let autonomia       = c/taplicacion; apacidad  */
       let availability = (addRowForm.pAvailability.checked) ? "Yes" : "No";
       let newDataSet = {
         "id"    : tableData.length + 1,
         "name"  : addRowForm.pName.value,
         "qty"   : addRowForm.pQty.value,
-        "avail" : availability
+       /*  "avail" : availability, */
+        "avail" : addRowForm.superficie.value/(addRowForm.capacidad.value/addRowForm.taplicacion.value),
+        "autonomia" : addRowForm.capacidad.value/addRowForm.taplicacion.value,
       };
 
       tableData.push(newDataSet);
@@ -159,7 +161,7 @@ var tableEditorModule = (function() {
       e.preventDefault();
       addRandomContent();
     });
-  };
+  }; 
 
   function exportTableData() {
     exportTableBtn.addEventListener("click", function(e) {
@@ -212,18 +214,18 @@ var tableEditorModule = (function() {
   };
 
   function init() {
-    addRandomContent();
-    addNewRow();
-    exportTableData();
-    clearTable();
-    delRows();
-    addDemoData();
-    importData();
-    exportData();
     sortColumn("id", sortIdBtn);
     sortColumn("name", sortNameBtn);
     sortColumn("qty", sortQtyBtn);
     sortColumn("avail", sortAvailBtn);
+    /* addRandomContent();  */
+    addNewRow();
+    /* exportTableData(); */
+    clearTable();
+    delRows();
+    /* addDemoData(); */
+    /* importData();
+    exportData(); */
     filterName();
   };
   return {
