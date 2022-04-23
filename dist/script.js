@@ -76,12 +76,14 @@ var tableEditorModule = (function() {
       e.preventDefault();
       let capacidad       = document.getElementById("capacidad");
       let taplicacion     = document.getElementById("taplicacion");
-     /*  let autonomia       = c/taplicacion; apacidad  */
+      let dosis           = document.getElementById("dosis");
+;     /*  let autonomia       = c/taplicacion; apacidad  */
       let availability = (addRowForm.pAvailability.checked) ? "Yes" : "No";
       let newDataSet = {
-        "id"    : tableData.length + 1,
-        "name"  : addRowForm.pName.value,
+        /* "id"    : tableData.length + 1, */
         "qty"   : addRowForm.pQty.value,
+        "id"    : addRowForm.dosis.value,
+        "name"  : addRowForm.pName.value,
        /*  "avail" : availability, */
         "avail" : addRowForm.superficie.value/(addRowForm.capacidad.value/addRowForm.taplicacion.value),
         "autonomia" : addRowForm.capacidad.value/addRowForm.taplicacion.value,
@@ -138,7 +140,7 @@ var tableEditorModule = (function() {
     };
     return finalStr;
   };
-  function addRandomContent() {
+/*   function addRandomContent() {
     let randomeRowsNum = getRandom(1, 10);
 
     for (let i = 0; i < randomeRowsNum; i++) {
@@ -185,7 +187,7 @@ var tableEditorModule = (function() {
       drawTable();
     });
   };
-
+ */
   let currentSortedColumn = "";
 
   function sortColumn(column, button) {

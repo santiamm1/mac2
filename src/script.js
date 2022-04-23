@@ -190,7 +190,7 @@ var tableEditorModule = (function() {
     });
   };
 
- /*  function filterName() {
+/*  function filterName() {
     filterNameInp.addEventListener("keyup", function() {
       let searchInp = this.value;
       let filteredArr = tableData.filter(data => data.name.toLowerCase().includes(searchInp));
