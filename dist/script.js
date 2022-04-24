@@ -35,6 +35,7 @@ var tableEditorModule = (function() {
           <td>${row.qty}</td>
           <td>${row.avail}</td>
           <td>${row.autonomia}</td>
+          <td>${row.prodcarga}</td>
           <td><input type="checkbox"></td>
         </tr>`}).join("");
 
@@ -78,7 +79,7 @@ var tableEditorModule = (function() {
       let taplicacion     = document.getElementById("taplicacion");
       let dosis           = document.getElementById("dosis");
 ;     /*  let autonomia       = c/taplicacion; apacidad  */
-      let availability = (addRowForm.pAvailability.checked) ? "Yes" : "No";
+      /* let availability = (addRowForm.pAvailability.checked) ? "Yes" : "No"; */
       let newDataSet = {
         /* "id"    : tableData.length + 1, */
         "qty"   : addRowForm.pQty.value,
@@ -87,6 +88,7 @@ var tableEditorModule = (function() {
        /*  "avail" : availability, */
         "avail" : addRowForm.superficie.value/(addRowForm.capacidad.value/addRowForm.taplicacion.value),
         "autonomia" : addRowForm.capacidad.value/addRowForm.taplicacion.value,
+        "prodcarga" : (addRowForm.capacidad.value/addRowForm.taplicacion.value)*addRowForm.dosis.value,
       };
 
       tableData.push(newDataSet);
