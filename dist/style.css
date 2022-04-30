@@ -52,11 +52,5 @@ justify-content: center;
 margin: 20px;
   
 }
-/* Aplicación de estilo responsive */
 
-@media only screen and (max-width: 375px) {
-  nav {
-    background-color: lightblue;
-  }
-}
 
