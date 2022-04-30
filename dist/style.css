@@ -14,3 +14,42 @@
   color: orange;
   text-decoration: none;
 }
+nav {
+  background-color: #52a545;
+}
+div.logo {
+  padding: 10px;
+  margin-left: 50px;
+}
+#titulo-inicial{
+  font-family: 'Questrial', sans-serif;
+  color: #52a545;
+  text-align: center;
+}
+legend,label,input,tr,th,tbody,p {
+  font-family: 'Questrial', sans-serif;
+}
+#leyenda{
+  font-family: 'Questrial', sans-serif;
+  text-align: center
+ 
+
+
+}
+button{
+font-family: 'Questrial', sans-serif;
+text-align: center;
+background-color: #52a545;
+color: white;
+border: #52a545 1px solid;
+padding: 10px 20px 10px 20px;
+}
+
+div.seccion-boton{
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin: 20px;
+  
+}
+

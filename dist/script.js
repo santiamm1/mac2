@@ -70,7 +70,7 @@ var tableEditorModule = (function() {
     });
 
 
-    /* VER ESTA PARTE DE JS  */
+ 
 
 
     addRowForm.addEventListener("submit", function(e) {
