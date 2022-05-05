@@ -17,7 +17,7 @@
   </nav>
 </header>
 <body>
-<div class="container m-5">
+<div class="container col-sm-12 mt-5">
   <h2 id="titulo-inicial">Orden de llenado de productos</h2>
   <p id="leyenda">Para utilizar el siguiente formulario debe completar los campos asignados de forma obligatoria y una vez completados los mismos, se debe hacer click en "Agregar producto". Recuerde que tiene un máximo de 10 productos por consulta.</p>
 <br/>
@@ -91,7 +91,8 @@
       <a href="#" id="addRow" ></a> 
       <a href="#" id="delRow" class="btn btn-primary">Borrar filas seleccionadas</a>
       <!-- a href="#" id="demoData" class="btn btn-success">Demo data</a> -->
-      <a href="#" id="clearTable" class="btn btn-danger">Borrar tabla</a>   
+      <a href="#" id="clearTable" class="btn btn-danger">Borrar tabla</a>
+      <button onclick="imprimirPagina()" class="btn btn-secondary">Imprimir página</button>   
     </div>
    
 
@@ -116,6 +117,12 @@
     </fieldset>
   </form> -->
 <!-- partial -->
+
 <script  src="./script.js"></script>
+<script>
+  function imprimirPagina(){
+    window.print();
+  }
+</script>
 </body>
 </html>
